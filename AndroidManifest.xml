@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    
+    <application >
+       
+        
+        <!-- 游戏密钥：填入gamekey -->
+        <meta-data
+            android:name="HJR_GAMEKEY"
+            android:value="游戏方申请的gamekey" >
+        </meta-data>
+        <!--请勿修改！-->
+        <meta-data
+            android:name="HJR_CHANNEL"
+            android:value="\ 0103" >
+
+        </meta-data>
+        <!--注意：在打正式包之前，务必修改 HJR_DATA_URL_DEBUG=false-->
+        <meta-data
+            android:name="HJR_DATA_URL_DEBUG"
+            android:value="true" />
+        
+        
+    </application>
+
+</manifest>
