@@ -11,8 +11,10 @@ import com.hjr.sdkkit.framework.mw.entity.ParamsContainer;
 import com.hjr.sdkkit.framework.mw.entity.ParamsKey;
 import com.hjr.sdkkit.framework.mw.openapi.HJRSDKKitPlateformCore;
 /**
- * 快发大师sdk 调用示例类
+ * 快发助手 调用示例类
  * @author HooRang
+ * @version 2.0.2
+ * @data 2015-05-29
  *
  */
 public class KFMasterActivity extends Activity {
