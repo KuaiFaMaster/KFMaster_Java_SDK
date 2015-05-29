@@ -51,11 +51,7 @@
         <meta-data
             android:name="HJR_DATA_URL_DEBUG"
             android:value="true" />
-         <meta-data
-            android:name="HJR_SDKKIT_SERVERURL"
-            android:value="http://test.z.haojieru.com"
-             >
-        </meta-data>
+        
       
     </application>
 
