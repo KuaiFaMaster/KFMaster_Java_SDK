@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kfmaster.sdkkit"
+    package="com.kfmaster.sdk.demo"
     android:versionCode="1"
     android:versionName="1.0" >
     
@@ -27,7 +27,7 @@
         <activity
             android:name="com.kfmaster.sdkkit.KFMasterActivity"
             android:configChanges="screenSize|keyboardHidden|orientation"
-            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +52,9 @@
             android:name="HJR_DATA_URL_DEBUG"
             android:value="true" />
         
-      
+        <meta-data
+            android:name="HJR_SDKKIT_SERVERURL"
+            android:value="http://test.z.haojieru.com" />
     </application>
 
 </manifest>

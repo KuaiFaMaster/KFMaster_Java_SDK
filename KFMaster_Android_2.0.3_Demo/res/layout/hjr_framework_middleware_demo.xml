@@ -48,12 +48,6 @@
             tools:ignore="HardcodedText" />
 
        
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="hjrSdkExit"
-            android:text="退出游戏"
-            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"

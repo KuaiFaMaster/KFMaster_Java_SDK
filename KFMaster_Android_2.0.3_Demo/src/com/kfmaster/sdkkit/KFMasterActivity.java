@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.hjr.sdkkit.framework.mw.entity.DataTypes;
@@ -11,10 +12,8 @@ import com.hjr.sdkkit.framework.mw.entity.ParamsContainer;
 import com.hjr.sdkkit.framework.mw.entity.ParamsKey;
 import com.hjr.sdkkit.framework.mw.openapi.HJRSDKKitPlateformCore;
 /**
- * 快发助手 调用示例类
+ * 快发助手sdk 调用示例类
  * @author HooRang
- * @version 2.0.2
- * @data 2015-05-29
  *
  */
 public class KFMasterActivity extends Activity {
@@ -122,13 +121,16 @@ public class KFMasterActivity extends Activity {
 		hjrSDK.Business.userCenter();
 	}
 
-	/**
-	 * 
-	 * @param v
-	 */
-	public void hjrSdkExit(View v) {
-		hjrSDK.Business.exitGame(this);
+
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			hjrSDK.Business.exitGame(this);
+		}
+		return super.onKeyDown(keyCode, event);
 	}
+	
 
 	// /
 	//以下接口，无需做任何修改，拷贝进游戏的主Activity即可

@@ -1,5 +1,6 @@
 package com.kfmaster.sdkkit;
 
+import android.os.Process;
 import android.util.Log;
 
 import com.hjr.sdkkit.framework.mw.openapi.callback.HJRSDKKitPlateformCallBack;
@@ -8,11 +9,11 @@ import com.hjr.sdkkit.framework.mw.openapi.callback.HJRSDKKitPlateformCallBack;
 /**
  * <li>文件名称: KFMasterSDKCallBack.java</li>
  * <li>文件描述: 回调接口示例代码</li>
- * <li>公    司: 快发大师</li>
+ * <li>公    司: 快发助手</li>
  * <li>内容摘要: 无</li>
- * <li>新建日期: 2014-12-3 下午4:27:38</li>
+ * <li>新建日期: 2015-07-01 下午4:27:38</li>
  * <li>修改记录: 无</li>
- * @version 产品版本: 2.0
+ * @version 产品版本: 2.0.3
  * @author  作者姓名: HooRang
  */
 public class KFMasterSDKCallBack implements HJRSDKKitPlateformCallBack {
@@ -52,6 +53,9 @@ public class KFMasterSDKCallBack implements HJRSDKKitPlateformCallBack {
 		Log.i(TAG, "exitGameCallBack-->retStatus#" + retStatus + ",retMessage#" + retMessage);
 		if (retStatus == HJRSDKKitPlateformCallBack.STATUS_SUCCESS) {
 			// 退出提示框点击了确定，做资源回收，退出应用
+			
+			Process.killProcess(android.os.Process.myPid());
+			
 		}else {
 			//点击了取消
 		}
