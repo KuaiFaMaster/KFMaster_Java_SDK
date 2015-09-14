@@ -18,3 +18,11 @@
 －升级方法：
 1.替换KFMaster_Java_2.0.2.jar为KFMaster_Java_2.0.3.jar
 2.拷贝res文件夹中的资源到项目工程中
+
+# SDK版本2.0.3升级至2.0.4说明 #
+
+- 升级点：
+1.增加游戏强更支持
+
+－升级方法：
+1.替换KFMaster_Java_2.0.3.jar为KFMaster_Java_2.0.4.jar
