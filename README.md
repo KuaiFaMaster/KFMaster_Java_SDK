@@ -26,3 +26,7 @@
 
 －升级方法：
 1.替换KFMaster_Java_2.0.3.jar为KFMaster_Java_2.0.4.jar
+
+
+# SDK版本2.0.4升级至3.0.0说明 #
+-具体升级方法请参考sdk包中Documents--SDK2.0.4升级到3.0必看.pdf

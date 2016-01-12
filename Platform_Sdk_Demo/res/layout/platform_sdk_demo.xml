@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lbl_callback_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用sdk，愿接入顺利...."
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_bussines_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_data_entergame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:visibility="gone"
+            android:text="统计进入游戏"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/exp_lv_function_tree"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+         />
+
+</LinearLayout>
