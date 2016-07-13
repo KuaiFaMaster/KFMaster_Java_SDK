@@ -13,9 +13,9 @@ import com.hjr.sdkkit.framework.mw.openapi.HJRSDKKitPlateformCore;
  * <li>Create Time: 2015-12-3 上午10:23:13</li>
  * @version 1.0.0
  * @author  HooRang
+ * 
  */
 public class DatasApi  {
-
 	private HJRSDKKitPlateformCore sdkObj ;
 
 	
@@ -37,6 +37,24 @@ public class DatasApi  {
 		pc.putString(ParamsKey.KEY_SERVER_ID, "123");
 		// 服务器名称
 		pc.putString(ParamsKey.KEY_SERVER_NAME, "服务器名称");
+		
+		
+		/**
+		 * 角色创建时间
+		 * 1.需要发uc九游渠道则必传，long类型 时间戳，十位数，特别注意不能取系统当前时间，需要传服务器的角色创建时间，服务端需要保存该值
+		 *   详情可查看uc官方要求说明：http://bbs.9game.cn/thread-5370208-1-1.html
+		 * 2.不需要上uc九游渠道，则传0L
+		 */
+		pc.put(ParamsKey.KEY_ROLE_CREATETIME, 0L);
+
+		
+		/**
+		 * 角色升级时间时间
+		 * 1.需要发uc九游渠道则必传，要求与以上
+		 * 2.不需要上uc九游渠道，则传0L
+		 */
+		pc.put(ParamsKey.KEY_ROLE_UPGRADETIME, 0L);
+		
 
 		sdkObj.Collections.onDatas(DataTypes.DATA_ENTER_GAME, pc);
 		
@@ -64,6 +82,21 @@ public class DatasApi  {
 		ParamsContainer pc = new ParamsContainer();
 		// 玩家升级后等级
 		pc.putString(ParamsKey.KEY_ROLE_LEVEL, "3");
+		/**
+		 * 角色创建时间
+		 * 1.需要发uc九游渠道则必传，long类型 时间戳，十位数，特别注意不能取系统当前时间，需要传服务器的角色创建时间，服务端需要保存该值
+		 *   详情可查看uc官方要求说明：http://bbs.9game.cn/thread-5370208-1-1.html
+		 * 2.不需要上uc九游渠道，则传0L
+		 */
+		pc.put(ParamsKey.KEY_ROLE_CREATETIME, 0L);
+
+		
+		/**
+		 * 角色升级时间时间
+		 * 1.需要发uc九游渠道则必传，要求与以上
+		 * 2.不需要上uc九游渠道，则传0L
+		 */
+		pc.put(ParamsKey.KEY_ROLE_UPGRADETIME, 0L);
 		sdkObj.Collections.onDatas(DataTypes.DATA_ROLE_UPGRADE, pc);
 		
 	}

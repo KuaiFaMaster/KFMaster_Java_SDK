@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.platform.sdk.demo" android:versionCode="1"
+	package="com.platform.sdk.demo" android:versionCode="10"
 	android:versionName="1.0">
 	
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -18,7 +18,7 @@
 	<application android:allowBackup="true"
 	    android:name="com.hjr.sdkkit.framework.mw.app.SDKBaseApplication"
 		android:icon="@drawable/ic_launcher" android:label="@string/app_name">
-		<activity 
+		<!--  <activity 
 		    android:name="com.platform.sdkkit.ui.SDKLauncherActivity"
 			android:configChanges="screenSize|keyboardHidden|orientation"
 			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
@@ -28,11 +28,28 @@
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
+		</activity>  -->
+	 <activity 
+		    android:name="com.platform.sdkkit.ui.SDKLauncherActivity"
+			android:configChanges="screenSize|keyboardHidden|orientation"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>  
+		<activity 
+		    android:name="com.hjr.sdkkit.framework.channel.plugins.SDKLauncher"
+			android:configChanges="screenSize|keyboardHidden|orientation"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			>
+		
 		</activity>
-     
+		
         <!-- 游戏密钥：填入gamekey -->
 		<meta-data android:name="HJR_GAMEKEY" android:value="441382c87fac1ea00185f0309db16ae7" />
-	
+		
 		<!--请勿修改！ -->
 		<meta-data android:name="HJR_CHANNEL" android:value="\ 0103" />
 		

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Process;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -58,6 +59,9 @@ public class SDKLauncherActivity extends Activity implements OnClickListener {
 		//SDK初始化，传入回调接口的实现类
 		sdkObj = HJRSDKKitPlateformCore.initHJRPlateform(this,new PlatformSDKCallBack(this));
 		dataApi = new DatasApi(sdkObj);
+		
+		
+	
 		
 
 	}
@@ -283,6 +287,15 @@ public class SDKLauncherActivity extends Activity implements OnClickListener {
 		super.onNewIntent(intent);
 		if (sdkObj != null) {
 			sdkObj.LifeCycle.onNewIntent(intent);
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (sdkObj != null) {
+			sdkObj.LifeCycle.onActivityResult(requestCode, resultCode, data);
 		}
 	}
 
